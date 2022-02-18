@@ -4,7 +4,7 @@ function [segments] = getsegments (data,segsize,fs,fig)
 %data= input data to be segmented
 %segsize = desired length of the segments in second (default = 2s)
 % fs = sampling frequency (default = 250)
-%fig = 1 if segments to be visualized
+%fig = 3 if segments to be visualized
 
 %setting the defaults
 if ~exist('segsize','var');segsize = 2;end
@@ -30,7 +30,7 @@ while t2<ns*fs
 end
 
 %Visualizing the segments
-if fig==1
+if fig==3
 figure()
 timevector = (1:1:ns)./250;
 plot(timevector,data)
